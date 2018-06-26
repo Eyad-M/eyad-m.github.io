@@ -1,3 +1,7 @@
+/// <reference path="../typings/globals/jquery/index.d.ts" />
+
+
+
 $(document).ready(function()
 {
 
@@ -5,7 +9,7 @@ $(function(){
 $('#logo').each(function(){
 $(this).addClass('link');
 $(this).mousedown(function(){
-window.location='Index.html';
+window.location='index.html';
 });
 });
 
