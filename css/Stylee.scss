@@ -7,7 +7,7 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
   padding: 0;
-  background: linear-gradient(to right, #192225,#212d32,#212d32,#212d32,#212d32,#192225);
+  background: linear-gradient(to right, #192225,#212c32,#212c32,#212c32,#212c32,#192225);
 }
 
 span{
@@ -36,6 +36,7 @@ span{
 
 #container{
   margin : 0 auto;
+  margin-top: 100px;
   width:70%;
   height: 100%;
 }
@@ -59,6 +60,8 @@ span{
 
 
 #Navigation {
+  position: fixed;
+  display: block;
   background-color:black;
   top: 0;
   margin: 0 auto;
@@ -77,11 +80,11 @@ span{
 #logoCont{
   align-self: center;
   width:fit-content;
-  margin-left: 50px;
+  height: 70%;
 }
 
 #logo{
-  height:50px;
+  height:100%;
 }
 
 #NavBxCont{
@@ -96,7 +99,7 @@ span{
   color: #ffffff;
   width: fit-content;
   display: inline-block;
-  margin: 0 40px;
+  margin: 0 30px;
   text-align: center;
   transition: border 300ms;
   font-size: 17px;
@@ -104,7 +107,7 @@ span{
 
 
 .NavBx:hover {
-  border-bottom: 3px solid #00b0f0;
+  border-bottom: 3px solid #00aff0;
 }
 
 
@@ -163,4 +166,16 @@ span{
 
 .catDesc{
   z-index: -999;
+}
+
+
+#resume{
+margin: 20px auto;
+width:70%;
+box-shadow: -1px 1px #00b0f0,1px 0px #00b0f0;
+border-radius: 10px;
+}
+
+#resumeHeading{
+  font-size: 60px;
 }

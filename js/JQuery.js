@@ -1,5 +1,51 @@
 /// <reference path="../typings/globals/jquery/index.d.ts" />
 
+window.onscroll=function(){scrollFunction()};
+
+function scrollFunction(){
+var nav=document.getElementById('Navigation');
+var navCont=document.getElementById('NavCont');
+if(document.body.scrollTop>(navCont.offsetHeight)||document.documentElement.scrollTop>(navCont.offsetHeight)){
+  nav.style.position='fixed';
+  nav.style.transition='opacity 300ms';
+  nav.style.opacity=0.7;
+  navCont.style.transition='height 300ms';
+  navCont.style.height='50px';
+
+$('.NavBx').each(function(){
+  this.style.transitionProperty='margin, font-size, border';
+  this.style.trnasitionDuration='300ms';
+  this.style.margin='0 20px';
+  this.style.fontSize='16px';
+  this.style.borderBottom='2px solid transparent';
+  $(this).hover(function(){
+    this.style.borderBottom='2px solid #00aff0';
+  },function(){
+    this.style.borderBottom='2px solid transparent';
+  });
+});
+}
+else
+{
+  nav.style.transition='opacity 300ms';
+  nav.style.opacity=1;
+  navCont.style.transition='height 300ms';
+  navCont.style.height='70px';
+  //nav.style.transitionProperty
+$('.NavBx').each(function(){
+  this.style.transitionProperty='margin, font-size, border';
+  this.style.trnasitionDuration='300ms';
+  this.style.margin='0 30px';
+  this.style.fontSize='17px';
+  this.style.borderBottom='3px solid transparent';
+  $(this).hover(function(){
+    this.style.borderBottom='3px solid #00aff0';
+  },function(){
+    this.style.borderBottom='3px solid transparent';
+  });
+});
+}
+}
 
 
 $(document).ready(function()
