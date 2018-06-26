@@ -5,8 +5,18 @@
 
 #Slider {
   width: 100%;
-  padding-top: 56.26%;
   background-color: black;
+  height: calc(70vw * 0.5625);
+  top: 0;
+  left: 0;
+}
+
+#SliderInner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #imgCont {
