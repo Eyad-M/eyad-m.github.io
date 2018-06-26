@@ -9,7 +9,7 @@ $(function(){
 $('#logo').each(function(){
 $(this).addClass('link');
 $(this).mousedown(function(){
-window.location='';
+window.location='/';
 });
 });
 
