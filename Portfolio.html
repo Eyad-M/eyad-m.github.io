@@ -8,6 +8,7 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/JQuery.js"></script>
 <script src="js/Slider.js"></script>
+<script src="js/Tabs.js"></script>
 
 
 <div id="Navigation">
@@ -44,31 +45,47 @@
 		</div>
 
 	<div id="catCont">
-		<div class="cat">
+		<div class="cat link" onclick="SwitchTab(event,'WebDevelopment');">
 			<img class="catImg" src="imgs/WD.png" alt="">
 			<span class="catDesc">Web Development</span>
 		</div>
-		<div class="cat">
+		<div class="cat link" onclick="SwitchTab(event,'SliderCont');">
 			<img class="catImg" src="imgs/D.png" alt="">
 			<span class="catDesc">Designs</span>
 		</div>
-		<div class="cat">
+		<div class="cat link" onclick="SwitchTab(event,'VideoGames');">
 			<img class="catImg" src="imgs/VG.png" alt="">
 			<span class="catDesc">Video-Games Development</span>
 		</div>
-		<div class="cat">
+		<div class="cat link">
 			<img class="catImg" src="imgs/CS.png" alt="">
 			<span class="catDesc">Coming Soon</span>
 		</div>
 	</div>
 	</div>
-	<div id="SliderCont">
+
+	<div id="tabContainer">
+
+	<div id="WebDevelopment" class="tabCont">
+		<div class="tabBg" style="background-color:white;">
+		<span style="font-size: 80px;color:#161616;">Coming Very Soon</span>
+		</div>
+	</div>
+
+	<div id="SliderCont" class="tabCont">
 	<div id="Slider">
 		<div id="SliderInner">
-		<span style="font-size: 80px;color:#00aff0;">Coming Very Soon</span>
+		<span style="font-size: 80px;color:#161616;">Coming Very Soon</span>
 		<div id="imgCont"></div>
 		<div  id="imgArr"></div>
 	</div>
+	</div>
+	</div>
+
+	<div id="VideoGames" class="tabCont">
+		<div class="tabBg">
+		<span style="font-size: 80px;color:#161616;">Coming Very Soon</span>
+		</div>
 	</div>
 	</div>
 

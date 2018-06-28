@@ -1,26 +1,44 @@
+//Eyad Moafa © 2018 All Rights Reserved :)
+//Eyad Moafa © 2018 All Rights Reserved :)
+//Eyad Moafa © 2018 All Rights Reserved :)
+
+
+
 function SwitchTab(evt, TabName){
-  // Declare all variables
-      var i, tabcontent, tablinks;
+      // Get all elements with class="tabCont" and hide them ***tabCont short form of tab container and it refer to the tab content***
+      $('.tabCont').each(function(){
+        $(this).hide();
+      });
 
-      // Get all elements with class="tabcontent" and hide them
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-      }
+      // Get all elements with class="cat" and remove the class "active" ***cat short form of categories and it refer to the tablinks***
+      $('.cat').each(function(){
+        $(this).removeClass('active');
+        });
 
-      // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("naviBx");
-      for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
+      // Show the active tab content
+      $('#'+TabName).show();
 
-      // Show the current tab, and add an "active" class to the button that opened the tab
-      document.getElementById(TabName).style.display = "block";
-      evt.currentTarget.className += " active";
 
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.cssText+="background-color:#333;color:#f2f2f2;";
-      }
-      evt.currentTarget.style.cssText+="background-color:white;color:black; ";
+      //currentTarget refer to the clicked tab
+      var currentTargt=evt.currentTarget;
+      
+      //add the class (active) to the clicked tab 
+      $(currentTargt).addClass('active');
 
+        // set defual css for the rest of the inactive tabs
+        $('.cat').each(function(){
+        $(this).css('width','100px');
+        });
+
+        //set the new css to the active tab
+        $(currentTargt).css('width','110px');
+
+
+        //special jquery animation you don't need :p
+        $('.catDesc').not('.active > .catDesc').stop().fadeOut(200);    
 }
+
+
+//Eyad Moafa © 2018 All Rights Reserved :)
+//Eyad Moafa © 2018 All Rights Reserved :)
+//Eyad Moafa © 2018 All Rights Reserved :)

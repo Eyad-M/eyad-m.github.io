@@ -6,6 +6,7 @@ body {
   text-align: center;
   margin: 0 auto;
   overflow-x: hidden;
+  overflow-y: scroll;
   padding: 0;
   background: linear-gradient(to right, #192225,#212c32,#212c32,#212c32,#212c32,#192225);
 }
@@ -153,15 +154,16 @@ span{
   margin :30px;
   width:100px;
   height:100px;
+  transition: width 300ms;
 }
 
 .catImg{
-  height:100%;
-  transition: height 300ms;
+  width:100%;
+  transition: width 300ms;
 }
 
-.catImg:hover{
-  height:110%;
+.cat:hover {
+  width:110px;
 }
 
 .catDesc{
@@ -178,4 +180,28 @@ border-radius: 10px;
 
 #resumeHeading{
   font-size: 60px;
+}
+
+#tabContainer{
+  display: flex;
+  justify-content: center;
+  margin:0 auto;
+}
+
+.tabCont {
+  width:70%;
+  margin: 30px auto;
+  position: absolute;
+  display: none;
+}
+
+.tabBg{
+  width:100%;
+  background-color: rgb(109, 109, 109);
+  height: calc(70vw * 0.5625);
+  top:0;
+  left:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
