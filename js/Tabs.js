@@ -7,7 +7,7 @@
 function SwitchTab(evt, TabName){
       // Get all elements with class="tabCont" and hide them ***tabCont short form of tab container and it refer to the tab content***
       $('.tabCont').each(function(){
-        $(this).hide();
+        $(this).stop().fadeOut(400);
       });
 
       // Get all elements with class="cat" and remove the class "active" ***cat short form of categories and it refer to the tablinks***
@@ -16,7 +16,7 @@ function SwitchTab(evt, TabName){
         });
 
       // Show the active tab content
-      $('#'+TabName).show();
+      $('#'+TabName).stop().fadeIn(800);
 
 
       //currentTarget refer to the clicked tab
