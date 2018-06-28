@@ -83,12 +83,18 @@
 	</div>
 
 	<div id="VideoGames" class="tabCont">
-		<div class="tabBg">
-			<div class="template-wrap clear" style="margin-top:130px;">
+		<div class="tabBg" style="">
+		<div style="top:0;left:0;display: flex;align-items: center;justify-content: center;width:100%;height:100%;">
+			<div style="position: absolute;">
+				<span>Loading Game, Please Wait...</span>
+				<div class="loader"></div>
+			</div>
+			<div class="template-wrap clear" style="margin-top:130px;position: absolute;">
     <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
       <div class="logo"></div>
       <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
       <div class="title">Jenga Game</div>
+		</div>
 		</div>
 	</div>
 	</div>
