@@ -131,10 +131,20 @@ span{
   cursor: pointer;
 }
 
+@mixin px1Storke($color) {
+  text-shadow:
+   -1px -1px 0 $color,  
+    1px -1px 0 $color,
+    -1px 1px 0 $color,
+     1px 1px 0 $color;
+}
 
 .button {
-  border-radius: 3px;
-  padding: auto 0;
+  border-radius: 100px;
+  padding: 5px 10px;
+  background-color: #00b0f0;
+  color: #ffffff;
+  @include DarkenHover(300ms)
 }
 
 #heading{
@@ -229,7 +239,15 @@ border-radius: 10px;
 }
 
 #playNow{
-  font-size: 40px;
-  padding: 15px;
-  @include DarkenHover(300ms)
+  font-size: 25px;
+  padding: 5px 15px;
+}
+
+.tabContent{
+  width:100%;
+  top:0;
+  left:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

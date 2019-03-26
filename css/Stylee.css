@@ -115,8 +115,16 @@ span {
 }
 
 .button {
-  border-radius: 3px;
-  padding: auto 0;
+  border-radius: 100px;
+  padding: 5px 10px;
+  background-color: #00b0f0;
+  color: #ffffff;
+  box-shadow: none;
+  transition: box-shadow 300ms;
+}
+
+.button:hover {
+  box-shadow: inset 0 0 0 99999px rgba(0, 0, 0, 0.25);
 }
 
 #heading {
@@ -217,13 +225,16 @@ span {
 }
 
 #playNow {
-  font-size: 40px;
-  padding: 15px;
-  box-shadow: none;
-  transition: box-shadow 300ms;
+  font-size: 25px;
+  padding: 5px 15px;
 }
 
-#playNow:hover {
-  box-shadow: inset 0 0 0 99999px rgba(0, 0, 0, 0.25);
+.tabContent {
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /*# sourceMappingURL=Stylee.css.map */
