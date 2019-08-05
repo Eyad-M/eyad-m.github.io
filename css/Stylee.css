@@ -7,6 +7,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#192225), color-stop(#212c32), color-stop(#212c32), color-stop(#212c32), color-stop(#212c32), to(#192225));
   background: linear-gradient(to right, #192225, #212c32, #212c32, #212c32, #212c32, #192225);
 }
 
@@ -60,12 +61,18 @@ span {
 #NavCont {
   margin: 0 auto;
   width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 70px;
 }
 
 #logoCont {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   height: 70%;
 }
@@ -76,18 +83,25 @@ span {
 
 #NavBxCont {
   margin-left: auto;
-  order: 2;
-  align-self: center;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .NavBx {
   border-bottom: 3px solid transparent;
   padding-bottom: 4px;
   color: #ffffff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   display: inline-block;
   margin: 0 30px;
   text-align: center;
+  -webkit-transition: border 300ms;
   transition: border 300ms;
   font-size: 17px;
 }
@@ -119,12 +133,17 @@ span {
   padding: 5px 10px;
   background-color: #00b0f0;
   color: #ffffff;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: -webkit-box-shadow 300ms;
+  transition: -webkit-box-shadow 300ms;
   transition: box-shadow 300ms;
+  transition: box-shadow 300ms, -webkit-box-shadow 300ms;
 }
 
 .button:hover {
-  box-shadow: inset 0 0 0 99999px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: inset 0 0 0 99999px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 0 0 99999px rgba(0, 0, 0, 0.25);
 }
 
 #heading {
@@ -133,22 +152,33 @@ span {
 }
 
 #catCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   margin: auto;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cat {
   margin: 30px;
   width: 100px;
   height: 100px;
+  -webkit-transition: width 300ms;
   transition: width 300ms;
 }
 
 .catImg {
   width: 100%;
+  -webkit-transition: width 300ms;
   transition: width 300ms;
 }
 
@@ -163,7 +193,8 @@ span {
 #resume {
   margin: 20px auto;
   width: 70%;
-  box-shadow: -1px 1px #00b0f0,1px 0px #00b0f0;
+  -webkit-box-shadow: -1px 1px #00b0f0,1px 0px #00b0f0;
+          box-shadow: -1px 1px #00b0f0,1px 0px #00b0f0;
   border-radius: 10px;
 }
 
@@ -172,8 +203,12 @@ span {
 }
 
 #tabContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
 }
 
@@ -190,9 +225,15 @@ span {
   height: calc(70vw * 0.5625);
   top: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .loader {
@@ -217,10 +258,12 @@ span {
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -233,8 +276,14 @@ span {
   width: 100%;
   top: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=Stylee.css.map */
